@@ -1,0 +1,344 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: auto;
+    padding: 0;
+    background-color: #f8f9fa;
+    text-align: justify;
+    overflow-x:hidden;
+  
+}
+p{
+    font-size: 1.2rem;
+    
+}
+.th3{
+    margin-left: 10% !important;
+}
+table,li {
+    font-size: 1.2rem; 
+}
+
+
+
+
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.container img {
+    max-width: 100%;
+    height: auto;
+}
+
+.image {
+    flex: 1 1 45%; 
+    margin-bottom: 10px; 
+}
+
+.full-width {
+    flex: 1 1 100%;
+}
+
+header {
+    background: #1d2f52;
+    color: #fff;
+    padding: 1.5rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start !important;
+    background-image: url('https://oppnadigital.com/portals/0/banner-corporate.jpg');
+    margin-left: 0 !important;
+    flex-wrap: wrap; 
+}
+
+header img {
+    height: 100px;
+    margin-right: 20px;
+}
+
+header .title-container {
+    flex-grow: 1;
+    text-align: left; 
+}
+
+header h3 {
+    font-size: 2rem;
+    margin: 0 !important;
+    padding: 0;
+    color: white !important;
+}
+
+header h3:first-of-type {
+    padding-top: 1.7rem !important;
+}
+
+header .subtext {
+    font-size: 1rem;
+    color: #ccc;
+    margin-top: 5px;
+}
+
+.rating {
+    background-color: #fff;
+    color: #1d2f52;
+    padding: 0.5rem;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    height: 2rem !important;
+    width: 4rem !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.rating span {
+    font-size: 0.8rem;
+    color: #000;
+}
+nav {
+    background: #e9ecef;
+    padding: 0.5rem;
+    display: flex;
+    overflow-x: auto; 
+    white-space: nowrap;
+    flex-wrap: nowrap; /* Ensure items don't wrap to the next line */
+    gap: 15px;
+}
+
+nav a {
+    color: #1d2f52;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 0.5rem;
+    border-radius: 4px;
+    position: relative; 
+    overflow: hidden; 
+    white-space: nowrap; /* Ensure text stays on one line */
+}
+
+nav::-webkit-scrollbar {
+    display: none;  /* Hide scrollbar for Chrome, Safari, and Opera */
+}
+
+nav a::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    width: 0;
+    background-color: #1d2f52; 
+    transition: width 300ms ease; 
+}
+
+nav a:hover::before {
+    width: 100%;
+}
+
+nav a:hover {
+    color: #1d2f52; 
+}
+
+section {
+    padding: 20px;
+}
+
+h2 {
+    color: #1d2f52;
+}
+
+.table-wrapper {
+    overflow-x: auto; 
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.table-wrapper::-webkit-scrollbar {
+    display: none;
+}
+
+.table-container {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+}
+
+th, td {
+    padding: 8px;
+    border: 1px solid #ddd;
+    text-align: left;
+}
+
+th {
+    background-color: #1d2f52;
+    color: #fff;
+}
+
+td {
+    background-color: #f2f2f2;
+}
+
+@media (max-width: 600px) {
+    .table-wrapper {
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        white-space: nowrap;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+
+    .table-wrapper::-webkit-scrollbar {
+        display: none;
+    }
+
+    .table-container {
+        width: 100% !important;
+    }
+}
+
+
+footer {
+    background: #1d2f52;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    margin-top: 20px;
+}
+
+p {
+    padding-top: 0;
+    margin-top: 0%;
+}
+
+
+h2,
+h3,
+h4,
+h5,
+h6,
+h1 {
+    padding-bottom: 0;
+    margin-bottom: 0%;
+}
+
+/* Media queries */
+@media (max-width: 600px) {
+
+    .image-container {
+        display: block !important; 
+        width: 100% !important;  
+        margin-bottom: 10px;
+        flex-direction: column !important;
+    }
+
+    .image-container img {
+        width: 100% !important; 
+        height: auto !important;
+        border-radius: 5px;
+    }
+
+    .rating {
+        font-size: 1rem;
+        width: auto; 
+        height: auto; 
+    }
+    nav {
+        max-height: 50vh; /* Adjust the height as needed */
+        overflow-y: hidden; /* Disable vertical scrolling */
+        overflow-x: auto; /* Enable horizontal scrolling */
+        -webkit-overflow-scrolling: touch; /* Smooth scrolling on touch devices */
+        white-space: nowrap; /* Ensure items don't wrap */
+        background-color: white; /* Match the background color with the rest of the page */
+    }
+
+    nav a {
+        flex-shrink: 0; /* Prevent links from shrinking in size */
+    }
+
+    
+    table{
+        width:100% !important;
+    }
+
+    .table-container {
+        overflow-x: hidden; 
+        width: 100% !important; 
+        -webkit-overflow-scrolling: touch !important;
+    }
+}
+
+.faq-container {
+    margin-top: 40px !important;
+    max-width: 90%;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.faqh2{
+    margin-bottom: 20px;
+    color:rgb(6, 6, 103);
+}
+.faq h2 {
+    text-align: center;
+    color: #333;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.faq {
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 10px;
+}
+
+.question {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+.question h3 {
+    font-size: 18px;
+    color: #3b3a3a;
+    margin: 0;
+}
+
+.question .icon {
+    font-size: 24px;
+    color: #333;
+}
+
+.answer {
+    display: none;
+    margin-top: 10px;
+    color: #666;
+}
+
+.question.active .icon span {
+    transform: rotate(45deg);
+    color: #007BFF;
+}
+
+.question.active + .answer {
+    display: block;
+}
+
+.faq:nth-child(1) .answer,
+.faq:nth-child(2) .answer {
+    display: block; 
+}
+
+.question.active .answer {
+    display: block; 
+}
