@@ -24,19 +24,40 @@
             </div>
         </header>
 
-        <nav id="navbar">
-            <a href="#about">About</a>
+        
+<div id="navbar"  class="navbar">
+    <a href="#about">About</a>
+
+            <!-- Courses & Fees Dropdown -->
             <a href="#courses">Courses & Fees</a>
             <a href="#admission">Admission</a>
-            <a href="#cutoff">Cutoff</a>
-            <a href="#placement">Placement</a>
+            
+            <div class="dropdown">
+                <button class="dropbtn">Cutoff
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="#gen">General</a>
+                    <a href="#obc">OBC</a>
+                </div>
+            </div>
+            <!-- Placement Dropdown -->
+            <div class="dropdown">
+                <button class="dropbtn">Placement
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="#2023">2023</a>
+                    <a href="#2024">2024</a>
+                </div>
+            </div>
+
             <a href="#ranking">Ranking</a>
             <a href="#scholarship">Scholarship</a>
             <a href="#campus">Campus</a>
             <a href="#alumni-network">Alumni</a>
             <a href="#faq">FAQ</a>
-
-        </nav>
+  </div>
 <div class="contain">
     <section id="about">
         <h2 style="padding-bottom: 0; margin-bottom: 0%;">About IIT Delhi</h2>
@@ -204,7 +225,7 @@
 
     <section id="cutoff">
         <h2>Cutoff</h2>
-        <p>The JOSAA Round 5 seat allotment has been released, showing the opening and closing ranks for General, OBC, ST, SC, and PWD categories. This year, JOSAA counseling will be conducted after Round 5.</p>
+        <p id="gen">The JOSAA Round 5 seat allotment has been released, showing the opening and closing ranks for General, OBC, ST, SC, and PWD categories. This year, JOSAA counseling will be conducted after Round 5.</p>
     
         <h3 class="th3">JEE Advanced Round 5 Closing Rank (General Category)</h3>
         <div class="table-wrapper">
@@ -318,7 +339,7 @@
                     <td>B.Tech in Energy Engineering</td>
                     <td>2839</td>
                     <td>2910</td>
-                    <td>2707</td>
+                    <td id="obc">2707</td>
                 </tr>
             </tbody>
         </table>
@@ -576,16 +597,16 @@
             <li>Reliance Industries</li>
         </ul>
     
-        <h3>IIT Delhi Placements 2024 Highlights</h3>
+        <h3 >IIT Delhi Placements 2024 Highlights</h3>
         <p>The key highlights of IIT Delhi placements 2024 are:</p>
         <ul>
             <li>Total offers: 1,050</li>
             <li>International offers: 50+</li>
             <li>Top recruiting sector: Core (Technical) with 42% placement distribution</li>
-            <li>Top recruiters: Microsoft, Goldman Sachs, Texas Instruments</li>
-        </ul>
+            <li id="2023">Top recruiters: Microsoft, Goldman Sachs, Texas Instruments</li>
+        </ul >
     
-        <h3 class="th3">IIT Delhi Placements 2023 Highlights</h3>
+        <h3 id class="th3">IIT Delhi Placements 2023 Highlights</h3>
         <div class="table-wrapper">
             <table class="table-container">
             <tr>
@@ -621,10 +642,10 @@
             <tr>
                 <td>Placement rate</td>
                 <td>82%</td>
-                <td>84.94%</td>
+                <td id="2024">84.94%</td>
             </tr>
         </table>
-        </div>
+        </div >
     
         <h3 class="th3">IIT Delhi MBA Placements 2024</h3>
         <p class="th3">The highlights of IIT Delhi MBA placements 2024 are as follows:</p>
@@ -976,8 +997,8 @@
  
     </section>
     
-
-    <div id="faq" class="faq-container">
+<section id="faq">
+    <div  class="faq-container">
         <h2 class="faqh2">Frequently Asked Questions</h2>
         <div class="faq">
             <div class="question">
@@ -1105,7 +1126,7 @@
     
     
         
-    
+</section>
 </div>
 </div>
 

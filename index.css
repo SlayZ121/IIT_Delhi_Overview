@@ -5,23 +5,30 @@ body {
     padding: 0;
     background-color: #f8f9fa;
     text-align: justify;
-    overflow-x:hidden;
-  
+    overflow-x: hidden;
 }
-p{
+html {
+    scroll-behavior: smooth;
+}
+#about{
+    padding-top:20px !important;
+}
+section {
+    padding: 20px !important;
+    padding-top: calc(20px + 50px) !important; /* Adjust 50px to the height of your navbar */
+}
+
+p {
     font-size: 1.2rem;
-    
 }
-.th3{
-    margin-left: 10% !important;
+
+.th3 {
+    margin-left: 10%;
 }
-table,li {
+
+table, li {
     font-size: 1.2rem; 
 }
-
-
-
-
 
 .container {
     display: flex;
@@ -52,7 +59,7 @@ header {
     justify-content: flex-start !important;
     background-image: url('https://oppnadigital.com/portals/0/banner-corporate.jpg');
     margin-left: 0 !important;
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
 }
 
 header img {
@@ -101,49 +108,6 @@ header .subtext {
     font-size: 0.8rem;
     color: #000;
 }
-nav {
-    background: #e9ecef;
-    padding: 0.5rem;
-    display: flex;
-    overflow-x: auto; 
-    white-space: nowrap;
-    flex-wrap: nowrap; /* Ensure items don't wrap to the next line */
-    gap: 15px;
-}
-
-nav a {
-    color: #1d2f52;
-    text-decoration: none;
-    font-weight: bold;
-    padding: 0.5rem;
-    border-radius: 4px;
-    position: relative; 
-    overflow: hidden; 
-    white-space: nowrap; /* Ensure text stays on one line */
-}
-
-nav::-webkit-scrollbar {
-    display: none;  /* Hide scrollbar for Chrome, Safari, and Opera */
-}
-
-nav a::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    height: 4px;
-    width: 0;
-    background-color: #1d2f52; 
-    transition: width 300ms ease; 
-}
-
-nav a:hover::before {
-    width: 100%;
-}
-
-nav a:hover {
-    color: #1d2f52; 
-}
 
 section {
     padding: 20px;
@@ -160,9 +124,7 @@ table {
     margin-bottom: auto;
 }
 
-table,
-th,
-td {
+table, th, td {
     border: 1px solid #ddd;
     padding: 8px;
 }
@@ -190,16 +152,11 @@ p {
     margin-top: 0%;
 }
 
-
-h2,
-h3,
-h4,
-h5,
-h6,
-h1 {
+h2, h3, h4, h5, h6, h1 {
     padding-bottom: 0;
     margin-bottom: 0%;
 }
+
 @media (max-width: 600px) {
     .table-wrapper {
         overflow-x: auto;
@@ -217,48 +174,34 @@ h1 {
         width: 100% !important;
     }
 }
-/* Media queries */
-@media (max-width: 600px) {
 
+@media (max-width: 600px) {
     .image-container {
-        display: block !important; 
-        width: 100% !important;  
+        display: block !important;
+        width: 100% !important;
         margin-bottom: 10px;
         flex-direction: column !important;
     }
 
     .image-container img {
-        width: 100% !important; 
+        width: 100% !important;
         height: auto !important;
         border-radius: 5px;
     }
 
     .rating {
         font-size: 1rem;
-        width: auto; 
-        height: auto; 
-    }
-    nav {
-        max-height: 50vh; /* Adjust the height as needed */
-        overflow-y: hidden; /* Disable vertical scrolling */
-        overflow-x: auto; /* Enable horizontal scrolling */
-        -webkit-overflow-scrolling: touch; /* Smooth scrolling on touch devices */
-        white-space: nowrap; /* Ensure items don't wrap */
-        background-color: white; /* Match the background color with the rest of the page */
+        width: auto;
+        height: auto;
     }
 
-    nav a {
-        flex-shrink: 0; /* Prevent links from shrinking in size */
-    }
-
-    
-    table{
-        width:100% !important;
+    table {
+        width: 100% !important;
     }
 
     .table-container {
-        overflow-x: hidden; 
-        width: 100% !important; 
+        overflow-x: hidden;
+        width: 100% !important;
         -webkit-overflow-scrolling: touch !important;
     }
 }
@@ -272,10 +215,12 @@ h1 {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
-.faqh2{
+
+.faqh2 {
     margin-bottom: 20px;
-    color:rgb(6, 6, 103);
+    color: rgb(6, 6, 103);
 }
+
 .faq h2 {
     text-align: center;
     color: #333;
@@ -324,9 +269,109 @@ h1 {
 
 .faq:nth-child(1) .answer,
 .faq:nth-child(2) .answer {
-    display: block; 
+    display: block;
 }
 
 .question.active .answer {
-    display: block; 
+    display: block;
+}
+  
+
+/* General navbar styling */
+.navbar {
+    display: flex;
+    background: #e9ecef;
+    align-items: center;
+    padding: 0;
+}
+
+.navbar a, .dropdown .dropbtn {
+    font-size: 16px;
+    color: #1d2f52;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none; 
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+    position: relative;
+    overflow: hidden;
+    border: none; /* Removes black border */
+}
+
+.navbar a::before, .dropdown .dropbtn::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    width: 0;
+    background-color: #1d2f52;
+    transition: width 300ms ease;
+}
+
+.navbar a:hover::before, .dropdown:hover .dropbtn::before {
+    width: 100%;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+    color: #1d2f52;
+}
+
+/* Dropdown menu */
+.dropdown {
+    position: relative;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    text-decoration: none !important;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    z-index: 100;
+}
+
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none !important;
+    display: block;
+    text-align: left;
+    border: none; /* Removes black border in dropdown */
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+    text-decoration: none !important; /* Removes underline on hover */
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.navbar {
+    transition: all 0.3s ease-in-out;
+}
+
+
+/* Responsive styling for smaller screens */
+@media (max-width: 600px) {
+    .navbar {
+        max-height: 50vh; /* Adjust the height as needed */
+         /* Disable vertical scrolling */
+         overflow-y:visible;
+        overflow-x: auto; /* Enable horizontal scrolling */
+        -webkit-overflow-scrolling: touch !important; /* Smooth scrolling on touch devices */
+        white-space: nowrap; /* Ensure items don't wrap */
+        background-color: white;
+        -ms-overflow-style: none;
+        scrollbar-width: none; /* Match the background color with the rest of the page */
+    }
+    .th3 {
+        margin-left: auto !important;
+    }
+    .navbar a {
+        flex-shrink: 0; /* Prevent links from shrinking in size */
+    }
 }
