@@ -23,7 +23,7 @@ window.addEventListener('scroll', function() {
     const navbar = document.getElementById('navbar');
     const scrollHeight = window.scrollY;
     const pageHeight = document.body.offsetHeight;
-    const triggerHeight = pageHeight * 0.01; // 20% of the page height
+    const triggerHeight = pageHeight * 0.01; 
 
     if (scrollHeight > triggerHeight) {
         navbar.style.position = 'fixed';

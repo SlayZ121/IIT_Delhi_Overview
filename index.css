@@ -15,7 +15,7 @@ html {
 }
 section {
     padding: 20px !important;
-    padding-top: calc(20px + 50px) !important; /* Adjust 50px to the height of your navbar */
+    padding-top: calc(20px + 50px) !important; 
 }
 
 p {
@@ -277,7 +277,6 @@ h2, h3, h4, h5, h6, h1 {
 }
   
 
-/* General navbar styling */
 .navbar {
     display: flex;
     background: #e9ecef;
@@ -296,7 +295,7 @@ h2, h3, h4, h5, h6, h1 {
     margin: 0;
     position: relative;
     overflow: hidden;
-    border: none; /* Removes black border */
+    border: none; 
 }
 
 .navbar a::before, .dropdown .dropbtn::before {
@@ -339,12 +338,12 @@ h2, h3, h4, h5, h6, h1 {
     text-decoration: none !important;
     display: block;
     text-align: left;
-    border: none; /* Removes black border in dropdown */
+    border: none; 
 }
 
 .dropdown-content a:hover {
     background-color: #ddd;
-    text-decoration: none !important; /* Removes underline on hover */
+    text-decoration: none !important; 
 }
 
 .dropdown:hover .dropdown-content {
@@ -355,23 +354,22 @@ h2, h3, h4, h5, h6, h1 {
 }
 
 
-/* Responsive styling for smaller screens */
+
 @media (max-width: 600px) {
     .navbar {
-        max-height: 50vh; /* Adjust the height as needed */
-         /* Disable vertical scrolling */
+        max-height: 50vh; 
          overflow-y:visible;
-        overflow-x: auto; /* Enable horizontal scrolling */
-        -webkit-overflow-scrolling: touch !important; /* Smooth scrolling on touch devices */
-        white-space: nowrap; /* Ensure items don't wrap */
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch !important; 
+        white-space: nowrap;
         background-color: white;
         -ms-overflow-style: none;
-        scrollbar-width: none; /* Match the background color with the rest of the page */
+        scrollbar-width: none; 
     }
     .th3 {
         margin-left: auto !important;
     }
     .navbar a {
-        flex-shrink: 0; /* Prevent links from shrinking in size */
+        flex-shrink: 0; 
     }
 }
